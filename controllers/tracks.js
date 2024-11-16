@@ -2,9 +2,6 @@ const Track = require("../models/track.js");
 const express = require("express");
 const router = express.Router();
 
-//Implement axios for the Deezer API
-const axios = require('axios');
-
 router.post("/", async (req, res) => {
   try {
     const createdTrack = await Track.create(req.body);
